@@ -1,10 +1,7 @@
 <template>
     <div id="contact">
         <div class="container">
-            <h3 class="text-uppercase">
-                contact page
-            </h3>
-            <lists :name="name" :items="items"></lists>
+            <lists :page-title="pageTitle" :url="url" :items="items"></lists>
         </div>
     </div>
 </template>
@@ -16,7 +13,8 @@ export default {
     components: {Lists},
     data(){
         return{
-            name: 'Contact',
+            url: this.$route.path,
+            pageTitle: 'Contact',
             items: [
                 'Item One',
                 'Item Two',
