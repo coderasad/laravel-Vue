@@ -1,71 +1,19 @@
 <template>
     <div id="about">
         <div class="container">
-<!--            <lists :page-title="pageTitle" :url="url" :items="items"></lists>-->
-            <div class="row mb-5 justify-content-around">
-                <div class="btn btn-info" style="max-width: 8rem;">info</div>
-                <div class="btn btn-danger" style="max-width: 8rem;">danger</div>
-                <div class="btn btn-success" style="max-width: 8rem;">success </div>
-                <div class="btn btn-primary" style="max-width: 8rem;">primary </div>
-                <div class="btn btn-secondary" style="max-width: 8rem;">secondary </div>
-                <div class="btn btn-warning" style="max-width: 8rem;">warning </div>
-                <div class="btn btn-dark" style="max-width: 8rem;">dark </div>
+            <!--            <lists :page-title="pageTitle" :url="url" :items="items"></lists>-->
+            <div class="row mb-5 gap-3 ">
+                <div @click="cardColor = btnColor" v-for="(btnColor,index) in btnColors" class="btn" :style="{backgroundColor: btnColor}" style="max-width: 8rem;">
+                    {{ index }}
+                </div>
             </div>
-            <div class="row justify-content-around">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <div class="row gap-3">
+                <div class="card text-white mb-3" v-for="list in lists" :style="{backgroundColor: cardColor}" style="max-width: 18rem;">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                         <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Secondary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Danger card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Warning card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Info card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Light card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dark card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                     </div>
                 </div>
             </div>
@@ -75,21 +23,37 @@
 
 <script>
 import Lists from "../components/Lists";
+
 export default {
-    name: "About",
+    name      : "About",
     components: {Lists},
-    data(){
-        return{
-            url: this.$route.path,
+    data() {
+        return {
+            url      : this.$route.path,
             pageTitle: 'About',
-            items: [
+            items    : [
                 'Item One',
                 'Item Two',
                 'Item Three',
                 'Item Four',
             ],
+            lists    : [1, 1, 1, 1, 1],
+            cardColor: '#6cb2eb',
+            btnColors : {
+                blue:    '#0d6efd',
+                indigo:  '#6610f2',
+                purple:  '#6f42c1',
+                pink:    '#d63384',
+                red:     '#dc3545',
+                orange:  '#fd7e14',
+                yellow:  '#ffc107',
+                green:   '#198754',
+                teal:    '#20c997',
+                cyan:    '#0dcaf0',
+            },
         }
     }
+
 }
 </script>
 

@@ -3,9 +3,18 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/about', component: About },
-    { path: '/contact', component: Contact},
+    {
+        path: '/',
+        component: Home
+    },
+    {
+        path: '/about',
+        component: About
+    },
+    {
+        path: '/contact',
+        component: Contact
+    },
 ];
 
 export default routes;

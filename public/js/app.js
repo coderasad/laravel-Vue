@@ -96,58 +96,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "About",
@@ -158,7 +106,21 @@ __webpack_require__.r(__webpack_exports__);
     return {
       url: this.$route.path,
       pageTitle: 'About',
-      items: ['Item One', 'Item Two', 'Item Three', 'Item Four']
+      items: ['Item One', 'Item Two', 'Item Three', 'Item Four'],
+      lists: [1, 1, 1, 1, 1],
+      cardColor: '#6cb2eb',
+      btnColors: {
+        blue: '#0d6efd',
+        indigo: '#6610f2',
+        purple: '#6f42c1',
+        pink: '#d63384',
+        red: '#dc3545',
+        orange: '#fd7e14',
+        yellow: '#ffc107',
+        green: '#198754',
+        teal: '#20c997',
+        cyan: '#0dcaf0'
+      }
     };
   }
 });
@@ -1262,265 +1224,65 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { attrs: { id: "about" } }, [
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "row mb-5 gap-3 " },
+        _vm._l(_vm.btnColors, function(btnColor, index) {
+          return _c(
+            "div",
+            {
+              staticClass: "btn",
+              staticStyle: { "max-width": "8rem" },
+              style: { backgroundColor: btnColor },
+              on: {
+                click: function($event) {
+                  _vm.cardColor = btnColor
+                }
+              }
+            },
+            [_vm._v("\n                " + _vm._s(index) + "\n            ")]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "row gap-3" },
+        _vm._l(_vm.lists, function(list) {
+          return _c(
+            "div",
+            {
+              staticClass: "card text-white mb-3",
+              staticStyle: { "max-width": "18rem" },
+              style: { backgroundColor: _vm.cardColor }
+            },
+            [
+              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
+              _vm._v(" "),
+              _vm._m(0, true)
+            ]
+          )
+        }),
+        0
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "about" } }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row mb-5 justify-content-around" }, [
-          _c(
-            "div",
-            {
-              staticClass: "btn btn-info",
-              staticStyle: { "max-width": "8rem" }
-            },
-            [_vm._v("info")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "btn btn-danger",
-              staticStyle: { "max-width": "8rem" }
-            },
-            [_vm._v("danger")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "btn btn-success",
-              staticStyle: { "max-width": "8rem" }
-            },
-            [_vm._v("success ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "btn btn-primary",
-              staticStyle: { "max-width": "8rem" }
-            },
-            [_vm._v("primary ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "btn btn-secondary",
-              staticStyle: { "max-width": "8rem" }
-            },
-            [_vm._v("secondary ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "btn btn-warning",
-              staticStyle: { "max-width": "8rem" }
-            },
-            [_vm._v("warning ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "btn btn-dark",
-              staticStyle: { "max-width": "8rem" }
-            },
-            [_vm._v("dark ")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row justify-content-around" }, [
-          _c(
-            "div",
-            {
-              staticClass: "card text-white bg-info mb-3",
-              staticStyle: { "max-width": "18rem" }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v("Primary card title")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card text-white bg-info mb-3",
-              staticStyle: { "max-width": "18rem" }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v("Secondary card title")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card text-white bg-info mb-3",
-              staticStyle: { "max-width": "18rem" }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v("Success card title")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card text-white bg-info mb-3",
-              staticStyle: { "max-width": "18rem" }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v("Danger card title")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card text-white bg-info mb-3",
-              staticStyle: { "max-width": "18rem" }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v("Warning card title")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card text-white bg-info mb-3",
-              staticStyle: { "max-width": "18rem" }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v("Info card title")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card bg-info mb-3",
-              staticStyle: { "max-width": "18rem" }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v("Light card title")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card text-white bg-info mb-3",
-              staticStyle: { "max-width": "18rem" }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v("Dark card title")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ])
-              ])
-            ]
-          )
-        ])
+    return _c("div", { staticClass: "card-body" }, [
+      _c("h5", { staticClass: "card-title" }, [_vm._v("Primary card title")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [
+        _vm._v(
+          "Some quick example text to build on the card title and make up the bulk of\n                        the card's content."
+        )
       ])
     ])
   }
